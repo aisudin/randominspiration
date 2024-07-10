@@ -1,8 +1,11 @@
 import fs from 'fs';
+import path from 'path';
+
+const quotesPath = path.join(__dirname, 'quotes.txt');
 
 async function getQuotes() {
     try {
-        const data = await fs.promises.readFile('quotes.txt', 'utf-8');
+        const data = await fs.promises.readFile(quotesPath, 'utf-8');
         if (!data.trim()) {
             throw new Error('File is empty or contains only whitespace.');
         }
