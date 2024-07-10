@@ -1,0 +1,21 @@
+{
+  "name": "randominspiration",
+  "version": "1.0.0",
+  "description": "Randomly generated inspirational quotes",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aisudin/randominspiration"
+  },
+  "keywords": [
+    "random",
+    "motivational",
+    "quotes"
+  ],
+  "author": "AI Sudin",
+  "license": "MIT"
+}
