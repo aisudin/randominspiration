@@ -1,7 +1,12 @@
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 import path from 'path';
 
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const quotesPath = path.join(__dirname, 'quotes.txt');
+
 
 async function getQuotes() {
     try {
