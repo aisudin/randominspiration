@@ -24,14 +24,14 @@ Since `deliverQuotes` is an asynchronous function, you need to handle it using `
     
 **Using `async`/`await`:**
 
-***Minimalist approach(without error handling)***
+***Minimalist approach***
 ```
 (async () => { 
 	const quote = await deliverQuotes();
 	console.log(quote); 
 })();
 ```
-***Recommended approach(Error handling)***
+***(Error handling)***
 ```
 (async () => {
         try {
@@ -47,7 +47,7 @@ Since `deliverQuotes` is an asynchronous function, you need to handle it using `
         }
 })(); 
 ```    
-**Using Promises with `.then()` and `.catch()`:**
+**Recommended approach using Promises with `.then()` and `.catch()`:**
  ```
 deliverQuotes()
         .then(quote => {
@@ -64,5 +64,5 @@ deliverQuotes()
 
 ### License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.
 > Written with [StackEdit](https://stackedit.io/).
