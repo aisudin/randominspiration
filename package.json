@@ -1,6 +1,6 @@
 {
   "name": "randominspiration",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Randomly generated inspirational quotes",
   "main": "index.js",
   "type": "module",
