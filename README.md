@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Welcome to the documentation for **My Package**. This package provides a collection of quotes.
+Welcome to the documentation for **randomInspiration**. This package provides a collection of quotes.
 
 ## Usage
 
