@@ -42,7 +42,7 @@ deliverQuotes('Albert Einstein').then(quote => console.log(quote));
 ### Minimalistic Async Usage with Variable and IIFE
 
 ```javascript
-
+import { deliverQuotes } from 'randominspiration';
 (async () => {
     const quote = await deliverQuotes(); // Optionally, pass a topic or author as argument
     console.log(quote); // Do something with the quote
@@ -52,7 +52,7 @@ deliverQuotes('Albert Einstein').then(quote => console.log(quote));
 ### Usage with Try-Catch
 
 ```javascript
-
+import { deliverQuotes } from 'randominspiration';
 const fetchQuote = async () => {
     try {
         const quote = await deliverQuotes('Albert Einstein');
