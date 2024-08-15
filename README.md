@@ -19,7 +19,7 @@ Welcome to the documentation for **My Package**. This package provides a collect
 To use this package, first install it using npm:
 
 ```bash
-npm install my-package
+npm install randominspiration
 ```
 
 Then, use it in your project:
@@ -27,7 +27,7 @@ Then, use it in your project:
 ### Basic Usage
 
 ```javascript
-import { deliverQuotes } from 'my-package';
+import { deliverQuotes } from 'randominspiration';
 
 // Fetch a motivational quote (defaults to topic 'motivation')
 deliverQuotes().then(quote => console.log(quote));
