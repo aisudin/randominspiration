@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Welcome to the documentation for **randomInspiration**. This package provides a collection of quotes.
+Welcome to the documentation for **Random Inspiration**. This package provides a collection of quotes.
 
 ## Usage
 
@@ -81,11 +81,25 @@ Here is some detailed statistical information:
 
 ## Contributing
 
-If you would like to contribute to this project, please follow these steps:
+If you would like to contribute to this project, here are some ways you can get involved:
 
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Submit a pull request with a detailed description of your changes.
+### How to Contribute
+
+1. **Fork the Repository**: [Fork the repository on GitHub](https://github.com/aisudin/randominspiration) to make your changes.
+2. **Create a New Branch**: Create a new branch for your changes.
+3. **Submit a Pull Request**: Open a pull request on GitHub with a detailed description of your changes.
+
+### Reporting Issues
+
+If you find a bug or have a feature request, please [open an issue on GitHub](https://github.com/aisudin/randominspiration/issues). Provide as much detail as possible to help me address the issue.
+
+### Contact
+
+For any other inquiries or if you need help, you can [email me](mailto:aisudin@gmail.com).
+
+### Acknowledgments
+
+Thank you for considering contributing to this project!
 
 [Back to Table of Contents](#table-of-contents)
 
