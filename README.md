@@ -1,5 +1,5 @@
 
-# My Package
+# Random Inspiration
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -10,7 +10,8 @@
 
 ## Introduction
 
-Welcome to the documentation for **Random Inspiration**. This package provides a collection of quotes.
+Welcome to the documentation for **Random Inspiration**. This package delivers a single random quote based on a specified topic or author, or provides a random quote without any specific criteria.
+
 
 ## Usage
 
