@@ -28,24 +28,25 @@ Then, use it in your project:
 ### Basic Usage
 
 ```javascript
-import { deliverQuotes } from 'randominspiration';
+import { deliverQuote } from 'randominspiration';
 
 // Fetch a motivational quote (defaults to topic 'motivation')
-deliverQuotes().then(quote => console.log(quote));
+deliverQuote().then(quote => console.log(quote));
 
 // Fetch a quote by topic
-deliverQuotes('god').then(quote => console.log(quote));
+deliverQuote('god').then(quote => console.log(quote));
 
 // Fetch a quote by author
-deliverQuotes('Albert Einstein').then(quote => console.log(quote));
+deliverQuote('Albert Einstein').then(quote => console.log(quote));
 ```
+**Note**: The `deliverQuote` function accepts a single parameter which can be either a topic or an author. Combining multiple criteria (e.g., `'einstein god'`) is not supported. For combined searches, make separate calls to the function.
 
 ### Minimalistic Async Usage with Variable and IIFE
 
 ```javascript
-import { deliverQuotes } from 'randominspiration';
+import { deliverQuote } from 'randominspiration';
 (async () => {
-    const quote = await deliverQuotes(); // Optionally, pass a topic or author as argument
+    const quote = await deliverQuote(); // Optionally, pass a topic or author as argument
     console.log(quote); // Do something with the quote
 })();
 ```
@@ -53,10 +54,10 @@ import { deliverQuotes } from 'randominspiration';
 ### Usage with Try-Catch
 
 ```javascript
-import { deliverQuotes } from 'randominspiration';
+import { deliverQuote } from 'randominspiration';
 const fetchQuote = async () => {
     try {
-        const quote = await deliverQuotes('Albert Einstein');
+        const quote = await deliverQuote('Albert Einstein');
         console.log(quote);
     } catch (error) {
         console.error('Failed to fetch quote:', error);
@@ -65,6 +66,17 @@ const fetchQuote = async () => {
 
 fetchQuote();
 ```
+**Error Handling**: The `deliverQuote` function may throw errors in cases such as:
+- Issues reading the `quotes.json` file.
+- Invalid JSON format in the `quotes.json` file.
+- No quotes available that match the specified topic or author.
+
+Make sure to handle these potential errors in your application code to ensure a smooth user experience.
+
+### Additional Notes
+
+- Ensure that `quotes.json` is properly formatted and located in the same directory as your code or adjust the path accordingly.
+- The `deliverQuote` function caches the quotes to improve performance. The cache is refreshed if an error occurs during the reading of quotes.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -74,7 +86,7 @@ Here is some detailed statistical information:
 
 - **Total Number of Quotes**: 2107
 
-- **Topics**: ability, absence, acquaintance, acting, action, adam and eve, admiration, adversity, advertising, advice, affliction, age, ambition, america, anger, animals, appearance, argument, art, bachelor, beauty, belief, bible, biography, birds, books, bread, brevity, business, capital and labor, care, cause, caution, change, character, charity, cheerfulness, childhood, choice, christ, christianity, circumstance, civilization, clergyman, clothes, commerce, commonsense, conquest, conscience, conservatism, man, manners, marriage, medicine, mind, moderation, modesty, money, months, morality, mother, mountain, music, mystery, name, nature, necessity, knowledge, science, neighbors, newness, news, night, opinion, opportunity, parting, passion, patience, peace, place, perseverance, pessimism, philosophy, poetry, politics, power, prayer, prejudice, pride, prison, proof, punishment, question, reason, reform, religion, revolution, riches, self knowledge, self reliance, ship, sin, silence, slavery, society, soldier, song, soul, speech, strength, success, sympathy, tale, talent, taste, thieves, time, thrift, toast, today, toleration, trees, trust, truth, tyranny, vice, victory, virtue, want, war, wickedness, weather, wife, will, wind, wine and spirits, wisdom, wish, wit, woman, wonder, wooing, word, work, world, worship, worth, wrong, youth, conversation, courage, cowardice, creation, criticism, cruelty, dancing, day, death, deception, deeds, democracy, desire, destiny, devil, difficulty, discretion, doubt, dream, drinking, duty, eating, economy, education, eloquence, enemy, egotism, england, enthusiasm, equality, evil, example, excellence, experience, face, faith, falsehood, fame, father, fate, fear, fishing, flattery, flowers, folly, forgetfulness, forgiveness, fortune, freedom, friendship, future, gambling, genius, gift, glory, gods, golden rule, goodness, government, grief, guilt, habit, hanging, happiness, hate, health, heart, heaven, hope, hero, honesty, horses, humanity, humility, husbands, ideas, ignorance, imagination, immortality, independence, influence, innocence, insanity, italy, jealousy, journalism, joy, judge, judgment, justice, kiss, language, law, leadership, lawyer, learning, liberty, life, like, light, lincoln, logic, love, lying, majority, prejudice , motivation, universe, god, identity, tragedy, self-esteem, ethics, evolution
+- **Topics**: ability, absence, acquaintance, acting, action, adam and eve, admiration, adversity, advertising, advice, affliction, age, ambition, america, anger, animals, appearance, argument, art, bachelor, beauty, belief, bible, biography, birds, books, bread, brevity, business, capital and labor, care, cause, caution, change, character, charity, cheerfulness, childhood, choice, christ, christianity, circumstance, civilization, clergyman, clothes, commerce, commonsense, conquest, conscience, conservatism, man, manners, marriage, medicine, mind, moderation, modesty, money, months, morality, mother, mountain, music, mystery, name, nature, necessity, knowledge, science, neighbors, newness, news, night, opinion, opportunity, parting, passion, patience, peace, place, perseverance, pessimism, philosophy, poetry, politics, power, prayer, prejudice, pride, prison, proof, punishment, question, reason, reform, religion, revolution, riches, self knowledge, self reliance, ship, sin, silence, slavery, society, soldier, song, soul, speech, strength, success, sympathy, tale, talent, taste, thieves, time, thrift, toast, today, toleration, trees, trust, truth, tyranny, vice, victory, virtue, want, war, wickedness, weather, wife, will, wind, wine and spirits, wisdom, wish, wit, woman, wonder, wooing, word, work, world, worship, worth, wrong, youth, conversation, courage, cowardice, creation, criticism, cruelty, dancing, day, death, deception, deeds, democracy, desire, destiny, devil, difficulty, discretion, doubt, dream, drinking, duty, eating, economy, education, eloquence, enemy, egotism, england, enthusiasm, equality, evil, example, excellence, experience, face, faith, falsehood, fame, father, fate, fear, fishing, flattery, flowers, folly, forgetfulness, forgiveness, fortune, freedom, friendship, future, gambling, genius, gift, glory, golden rule, goodness, government, grief, guilt, habit, hanging, happiness, hate, health, heart, heaven, hope, hero, honesty, horses, humanity, humility, husbands, ideas, ignorance, imagination, immortality, independence, influence, innocence, insanity, italy, jealousy, journalism, joy, judge, judgment, justice, kiss, language, law, leadership, lawyer, learning, liberty, life, like, light, lincoln, logic, love, lying, majority, prejudice , motivation, universe, god, identity, tragedy, self-esteem, ethics, evolution
 
 - **Authors**: Chinese Proverb, Henry Wadsworth Longfellow, Napoleon Bonaparte, Corinthians, Bible, Homer, Anonymous, Thomas Fuller, Miguel De Cervantes, Samuel Johnson, George Herbert, James Russell Lowell, William Shakespeare, Luke, Bible, Johann Friedrich Von Schiller, Sophocles, Alfred Tennyson, Mark Twain, Thomas Hood, Ambrose Gwinnett Bierce, Rochefoucauld, Alexander Pope, Charles Caleb Colton, William Hazlitt, Benjamin Disraeli, George Norman Douglas, Thomas Jefferson, Horace, French Proverb, Publilius Syrus, Thomas Carlyle, Hebrews, Bible, Aeschylus, Francis Bacon, Benjamin Franklin, Oliver Wendell Holmes, The Book Of Psalms, Arthur Schopenhauer, Oscar Wilde, Marcus Tullius Cicero, Ralph Waldo Emerson, John Milton, Daniel Webster, Woodrow Wilson, William Congreve, John Dryden, Robert Green Ingersoll, Proverbs, George Eliot, Robert Burns, Lord Chesterfield, William Schwenck Gilbert, Matthew, Bible, Jonathan Swift, Lord Byron, The Book Of Ecclesiastes, Victor Hugo, Omar Khayyam, Durante Degli Alighieri Dante, Ben Jonson, Rudyard Kipling, John Keats, Clive Staples Lewis, Gaius Julius Caesar, Mark, Bible, Michel Eyquem De Montaigne, William Ellery Channing, Plutarch Lucius Mestrius Plutarchus, Edgar Allan Poe, Job, Bible, Charles Kingsley, Voltaire, John Heywood, John, Bible, Martin Luther, William Penn, Calvin Coolidge, Isaiah, Theodore Roosevelt, Abraham Lincoln, Thomas Chandler Haliburton, Confucius, Euripides, Robert Browning, Washington Irving, Wendell Phillips, Johann Wolfgang Von Goethe, Acts, William Makepeace Thackeray, English Proverb, Robert Louis Balfour Stevenson, Desiderius Erasmus Roterodamus, Thomas A Kempis, Jean-jacques Rousseau, Leo Tolstoy, Walter Scott, Socrates, Felicia Hemans, Edmund Burke, Robert Herrick, Thomas Paine, Plato, Oliver Goldsmith, Friedrich Nietzsche, Lucius Annaeus Seneca, Terence Publius Terentius Afer, Honore De Balzac, Book Of Common Prayer, Genesis, Bible, George Bernard Shaw, Aristotle, Henry David Thoreau, Timothy, Percy Bysshe Shelley, John Locke, Samuel Taylor Coleridge, Thomas Campbell, Thomas Moore, Leigh Hunt, Immanuel Kant, Francois Rabelais, Stephen Hawking, La Fontaine, Blaise Pascal, Joseph Joubert, St. Augustine, Herbert Spencer, Bertrand Russell, Christian Nestell Bovee, Jean-baptiste Poquelin Moliere, Romans, Bible, Walt Whitman, Edward George Earle Lytton Bulwer, Charles Dickens, George Washington, Henry Ward Beecher, Martin Luther King, Thomas Alva Edison, Winston Churchill, Patrick Henry, Dwight David Eisenhower, Albert Einstein, Gottfried Wilhelm Leibniz, Rabindranath Tagore, Baruch Spinoza, William James, Wayne Dyer, Leonardo Da Vinci, Georg Wilhelm Friedrich Hegel, Erich Fromm, Rene Descartes, David Hume, Mahatma Gandhi, Thomas Carlyle  , Frank Herbert, Roy T. Bennett, Walter Anderson, Herman Melville, Dale Carnegie, Unknown, Paulo Coelho, Thomas Edison, Epictetus, Dalai Lama, AI Sudin, Dr. Seuss, Geena Davis, Toni Morrison, Oprah Winfrey, F. Scott Fitzgerald, Robert Frost, Charles Schulz, Robert Louis Stevenson, Kofi Annan, Aage Niels Bohr, Jimmy Carter, Mairead Corrigan Maquire, Frederik Willem de Klerk, Mohamed ElBaradei, Gabriel Garcia Márquez, Mikhail Sergeyevich Gorbachev, Al Gore Jr., Seamus Heaney, John Hume, Mitski, Eckhart Tolle
 
