@@ -1,0 +1,23 @@
+# local files
+genReadme.js
+quotes.txt
+test.js
+# Ignore node_modules directory
+node_modules/
+
+# Ignore test files
+tests/
+*.test.js
+
+# Ignore configuration files
+*.config.js
+
+# Ignore log files
+*.log
+
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore specific files
+secret.env
