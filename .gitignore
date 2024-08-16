@@ -1,6 +1,7 @@
 # My own files
 genReadme.js
 test.js
+.npmginore
 
 # Logs
 logs
