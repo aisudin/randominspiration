@@ -51,7 +51,7 @@ async function deliverQuote(parameter) {
                 !deliveredQuotes.has(JSON.stringify(quote)));
 
             if (filteredQuotes.length === 0) {
-                return null; // No quotes available from the 'motivation' topic
+                filteredQuotes=cachedQuotes; // When all quotes from the 'motivation' topic is delivered use the entire cachedQuotes.
             }
         } else {
             // Parameter provided, filter quotes based on the parameter
